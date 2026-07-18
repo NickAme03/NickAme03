@@ -1,7 +1,7 @@
 # Hi, I'm Niccolò
 
-I study semiotics and build systems: design, web, games, and lately an
-ecosystem of AI skills that runs my "second brain".
+AI systems engineer: I design agent ecosystems, multi-session workflows and
+the skill graphs that run them. Background in design, web and game dev.
 
 **The main thing here right now** is
 [claude-second-brain](https://github.com/NickAme03/claude-second-brain):
