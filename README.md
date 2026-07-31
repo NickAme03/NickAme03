@@ -9,7 +9,7 @@ A connected skill ecosystem for Claude Code. Most skill repos are catalogs:
 isolated prompts you have to remember to invoke. This one is a system. Every
 skill declares what comes after it, honesty is enforced by hard prohibitions
 rather than by tone, and the graph that links them is maintained by one of its
-own nodes. 13 skills, MIT, [live site](https://nickame03.github.io/claude-second-brain/).
+own nodes. MIT, [live site](https://nickame03.github.io/claude-second-brain/).
 
 **[PlutoGate](https://github.com/NickAme03/Pact)**
 Permissions as contract clauses, not machine settings. An orchestrator that
