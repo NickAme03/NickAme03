@@ -36,3 +36,30 @@ drifts because it recomputes from files that get rewritten underneath it.
 [path-of-gods](https://github.com/NickAme03/path-of-gods), a 2D action-platformer
 in LÖVE2D/Lua. Different problem, same habit of building the system before the
 content.
+
+### Other people's repositories
+
+Tools that read agent transcripts mostly run their tests on Linux. The paths
+inside those transcripts are the one thing that changes shape on Windows, so I
+went looking there. Fork, add a workflow with an ubuntu and windows matrix, run
+the suite, compare. The ubuntu leg is the control: without it a Windows failure
+tells you nothing, because you cannot separate a broken platform from a broken
+suite.
+
+[junhoyeo/tokscale](https://github.com/junhoyeo/tokscale) is the one worth
+citing. 947 tests passed and 12 failed on Windows, against 2461 passed and none
+failed on Ubuntu, with the suite stopping at the first binary and never reaching
+the end. Three of the twelve were in the program itself, not in its tests.
+[The run](https://github.com/NickAme03/tokscale/actions/runs/30696683117),
+[the report](https://github.com/junhoyeo/tokscale/issues/997).
+
+Before that, [three merged patches on
+splitrail](https://github.com/Piebald-AI/splitrail/pulls?q=is%3Apr+author%3ANickAme03+is%3Amerged),
+and [Claude-Code-Usage-Monitor
+#238](https://github.com/Maciek-roboblog/Claude-Code-Usage-Monitor/issues/238),
+where six of the nine failures were tests asserting on a POSIX API that the
+program had already worked around.
+
+[phuryn/claude-usage](https://github.com/phuryn/claude-usage) came back clean,
+eight green jobs out of eight. That one is in the record too, with the same
+detail as the others.
