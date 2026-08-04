@@ -50,8 +50,16 @@ suite.
 citing. 947 tests passed and 12 failed on Windows, against 2461 passed and none
 failed on Ubuntu, with the suite stopping at the first binary and never reaching
 the end. Three of the twelve were in the program itself, not in its tests.
+
+All three shipped fixed in v4.9.0. The maintainer then put the windows leg in
+himself and ran it with `--no-fail-fast`, which reached the nine binaries that
+had never executed on Windows at all: 34 failures, not 12, and 33 of them
+predated the report. They are enumerated now in six root-cause groups, two of
+which look like Windows defects in the program rather than artefacts of its
+tests.
 [The run](https://github.com/NickAme03/tokscale/actions/runs/30696683117),
-[the report](https://github.com/junhoyeo/tokscale/issues/997).
+[the report](https://github.com/junhoyeo/tokscale/issues/997),
+[what it uncovered](https://github.com/junhoyeo/tokscale/issues/1014).
 
 Before that, [three merged patches on
 splitrail](https://github.com/Piebald-AI/splitrail/pulls?q=is%3Apr+author%3ANickAme03+is%3Amerged),
