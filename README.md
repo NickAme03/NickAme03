@@ -54,9 +54,15 @@ the end. Three of the twelve were in the program itself, not in its tests.
 All three shipped fixed in v4.9.0. The maintainer then put the windows leg in
 himself and ran it with `--no-fail-fast`, which reached the nine binaries that
 had never executed on Windows at all: 34 failures, not 12, and 33 of them
-predated the report. They are enumerated now in six root-cause groups, two of
-which look like Windows defects in the program rather than artefacts of its
-tests.
+predated the report, spanning six root-cause groups. Two of those groups looked
+like Windows product defects and turned out not to be: the fixtures built their
+JSON by interpolating a filesystem path, which parses on Linux and not on
+Windows, and the parse error was swallowed into an empty result. I verified the
+product side separately against a real Windows install.
+
+The suite is green there now, and the windows leg is a hard gate: a Windows
+failure blocks a merge, in a project that had never executed a single test on
+Windows before the report.
 [The run](https://github.com/NickAme03/tokscale/actions/runs/30696683117),
 [the report](https://github.com/junhoyeo/tokscale/issues/997),
 [what it uncovered](https://github.com/junhoyeo/tokscale/issues/1014).
