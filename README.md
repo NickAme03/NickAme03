@@ -63,6 +63,13 @@ product side separately against a real Windows install.
 The suite is green there now, and the windows leg is a hard gate: a Windows
 failure blocks a merge, in a project that had never executed a single test on
 Windows before the report.
+
+That same false claim was still sitting in the project's own CI workflow, where
+it is what a future reader consults before touching the leg. I opened a PR
+against it; it conflicted with a change that landed hours later, so the
+maintainer rebased my correction onto his own tree and merged it as
+[20e2932](https://github.com/junhoyeo/tokscale/commit/20e29322a4c3bca2f155e1a8d1ab35c581309019),
+co-authored.
 [The run](https://github.com/NickAme03/tokscale/actions/runs/30696683117),
 [the report](https://github.com/junhoyeo/tokscale/issues/997),
 [what it uncovered](https://github.com/junhoyeo/tokscale/issues/1014).
