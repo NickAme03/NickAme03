@@ -76,8 +76,8 @@ was written down before any model ran: a result counts only if it beats it.
 [autoscuolaspagnoletto.it](https://www.autoscuolaspagnoletto.it/), a driving
 school in Milan. I audited the old WordPress site against six local
 competitors, then replaced it with a static site of nine pages, live 15 days
-after the audit. Built with Claude Code; the Python enrolment service I am
-writing by hand. The code is private.
+after the audit. I am now writing its Python enrolment service. The code is
+private.
 
 ### Elsewhere
 
